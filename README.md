@@ -1,6 +1,6 @@
 # pocieszacz [WIP]
 
-TO-DO-podobna aplikacja do zapisywania i dzielenia się pocieszeniami.
 
-Póki co... 
+Póki, co TO-DO-podobna aplikacja do zapisywania i dzielenia się pocieszeniami.
+ 
 
