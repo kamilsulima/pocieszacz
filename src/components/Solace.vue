@@ -1,30 +1,23 @@
 <template>
-  <div>
+  <div> <!-- TO SIĘ MOŻE PRZYDAĆ... -->
    <div class="holder">
-
+<!-- POCIESZ-WPROWADŹ -->
 <form @submit.prevent="addSolace">
-<input type="text" placeholder="Wpisz swoje pocieszenie..." v-model="pocieszenie" v-validate="'min:5'" name="pocieszenie">
-
-<transition name="alert-in">
-<p class="alert" v-if="errors.has('pocieszenie')">{{ errors.first('pocieszenie') }}</p>
-</transition>
-
+    <input type="text" placeholder="Wprowadź pocieszenie..." v-model="pocieszenie" v-validate="'min:5'" name="pocieszenie">
 </form>
-
+<!-- TO DO TO-DO PODOBNE -->
      <ul>
        <transition-group name="list" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
        <li v-for="(data, index) in solace" :key='index'> 
          {{ data.pocieszenie }}  <i class="fa fa-minus-circle" v-on:click="remove(index)"></i>
        </li>
-       
        </transition-group>
      </ul>
-     
-
-<p>Tutaj możesz dodawać swoje pocieszenia.</p>
-
-
-   </div>
+<!-- ALERT MATE
+     <transition name="alert-in">
+    <p class="alert" v-if="errors.has('pocieszenie')">{{ errors.first('pocieszenie') }}</p>
+    </transition> -->
+   </div> 
   </div>
 </template>
 
@@ -35,8 +28,8 @@ export default {
     return {
       pocieszenie: "",
       solace: [
-      //   { pocieszenie: "Pocieszenie nadchodzi." },
-      //  { pocieszenie: "Pocieszenie jest blisko." }
+        { pocieszenie: "Pocieszenie nadchodzi." },
+        { pocieszenie: "Pocieszenie jest blisko." }
       ]
     };
   },
@@ -59,7 +52,6 @@ export default {
 </script>
 
 <style scoped>
-@import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 .holder {
@@ -76,7 +68,7 @@ ul li {
   padding: 20px;
   font-size: 1.3em;
   background-color: #e0edf4;
-  border-left: 5px solid #3eb3f6;
+  border-left: 5px solid #00cdcd;
   margin-bottom: 2px;
   color: #3e5252;
 }
@@ -96,8 +88,8 @@ input {
   border: 0;
   padding: 20px;
   font-size: 1.3em;
-  background-color: #323333;
-  color: #687f7f;
+  background-color: #00cdcd;
+  color: black;
 }
 
 .alert {
@@ -109,10 +101,10 @@ input {
 }
 
 .alert-in-enter-active {
-  animation: bounce-in 0.5s;
+  animation: bounce-in 1s;
 }
 .alert-in-leave-active {
-  animation: bounce-in 0.5s reverse;
+  animation: bounce-in 1s reverse;
 }
 @keyframes bounce-in {
   0% {
