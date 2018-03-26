@@ -1,2 +1,4 @@
-# pocieszacz
-TO-DO-podobna aplikacja do zapisywania i dzielenia się pocieszeniami. :)
+# pocieszacz [WIP]
+
+TO-DO-podobna aplikacja do zapisywania i dzielenia się pocieszeniami.
+
